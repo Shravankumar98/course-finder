@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getCourses } from "../api";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 import "./styles.css";
+import Filters from "../components/Filters/Filters";
 
 const Courses = () => {
   const [coursesList, setCoursesList] = useState([]);
@@ -42,29 +43,12 @@ const Courses = () => {
       <h1>Courses</h1>
 
       {/* Filters */}
-      <div className="filters">
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className="filter-select"
-        >
-          <option value="">All Categories</option>
-          <option value="Web">Web</option>
-          <option value="Backend">Backend</option>
-          <option value="Data">Data</option>
-        </select>
-
-        <select
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-          className="filter-select"
-        >
-          <option value="">All Levels</option>
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Advanced">Advanced</option>
-        </select>
-      </div>
+      <Filters
+        category={category}
+        level={level}
+        setCategory={setCategory}
+        setLevel={setLevel}
+      />
 
       {/* Results */}
       <div className="course-container">

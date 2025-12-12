@@ -1,0 +1,32 @@
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  padding: 10px;
+  /* background: #f7f7f7; */
+  border-radius: 8px;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  /* background: white; */
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

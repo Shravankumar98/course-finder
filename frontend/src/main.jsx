@@ -3,14 +3,12 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import "./index.css";
 import Courses from "./pages/Courses.jsx";
-import CourseDetails from "./pages/CourseDetails.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <StrictMode>
       <Routes>
         <Route path="/" element={<Courses />} />
-        {/* <Route path="/courses/:id" element={<CourseDetails />} /> */}
       </Routes>
     </StrictMode>
   </BrowserRouter>
