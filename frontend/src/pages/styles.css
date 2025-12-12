@@ -1,0 +1,9 @@
+.main {
+  padding: 20px;  
+}
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 15px;
+  gap: 20px;
+}
